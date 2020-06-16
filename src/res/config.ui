@@ -1,0 +1,1155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>530</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Настройки программы</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_8">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QListWidget" name="listWidget">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>85</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="whatsThis">
+        <string>Основные настройки программы</string>
+       </property>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="autoScroll">
+        <bool>true</bool>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>75</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="movement">
+        <enum>QListView::Static</enum>
+       </property>
+       <property name="isWrapping" stdset="0">
+        <bool>true</bool>
+       </property>
+       <property name="viewMode">
+        <enum>QListView::IconMode</enum>
+       </property>
+       <item>
+        <property name="text">
+         <string>Основные</string>
+        </property>
+        <property name="whatsThis">
+         <string>Основные настройки программы</string>
+        </property>
+        <property name="textAlignment">
+         <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/res/config.png</normaloff>:/res/config.png</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Фото</string>
+        </property>
+        <property name="whatsThis">
+         <string>Выбор отправляемого в письме фото</string>
+        </property>
+        <property name="textAlignment">
+         <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/res/photo.png</normaloff>:/res/photo.png</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Письма</string>
+        </property>
+        <property name="whatsThis">
+         <string>Шаблоны отправляемых писем поклонникам</string>
+        </property>
+        <property name="textAlignment">
+         <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/res/mail.png</normaloff>:/res/mail.png</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Сообщения</string>
+        </property>
+        <property name="whatsThis">
+         <string>Шаблоны отправляемых сообщений в чат</string>
+        </property>
+        <property name="textAlignment">
+         <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/res/chat.png</normaloff>:/res/chat.png</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Блэклист</string>
+        </property>
+        <property name="whatsThis">
+         <string>Черный список, тех кому мы ничего не шлем</string>
+        </property>
+        <property name="textAlignment">
+         <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/res/blacklist.png</normaloff>:/res/blacklist.png</iconset>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QStackedWidget" name="stackedWidget">
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="page">
+        <layout class="QVBoxLayout" name="verticalLayout_11">
+         <item>
+          <widget class="QGroupBox" name="groupBox_10">
+           <property name="title">
+            <string>Настройка рассылки</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <layout class="QGridLayout" name="gridLayout_2">
+              <item row="0" column="1">
+               <widget class="QSlider" name="horizontalSlider_interval">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Интервал между рассылками.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Активно если установлен режим &amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;ПО ПОРЯДКУ&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Устанавливает интервал в секундах между циклами рассылок.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;То есть, когда программа сделает рассылку первого письма по всем мужчинам онлайн, то перед тем как начинать рассылать второе письмо, программа будет ждать заданное число секунд до начала следующей рассылки.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="whatsThis">
+                 <string>Интервал между рассылками (мин.)</string>
+                </property>
+                <property name="maximum">
+                 <number>20</number>
+                </property>
+                <property name="pageStep">
+                 <number>1</number>
+                </property>
+                <property name="value">
+                 <number>0</number>
+                </property>
+                <property name="sliderPosition">
+                 <number>0</number>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="tickPosition">
+                 <enum>QSlider::TicksBelow</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QLCDNumber" name="lcdNumber">
+                <property name="digitCount">
+                 <number>4</number>
+                </property>
+                <property name="segmentStyle">
+                 <enum>QLCDNumber::Flat</enum>
+                </property>
+                <property name="intValue" stdset="0">
+                 <number>0</number>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QLCDNumber" name="lcdNumber_2">
+                <property name="digitCount">
+                 <number>4</number>
+                </property>
+                <property name="segmentStyle">
+                 <enum>QLCDNumber::Flat</enum>
+                </property>
+                <property name="value" stdset="0">
+                 <double>5.000000000000000</double>
+                </property>
+                <property name="intValue" stdset="0">
+                 <number>5</number>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="label">
+                <property name="whatsThis">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>Интервал между рассылками (мин.)</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_2">
+                <property name="whatsThis">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>Таймаут между сообщениями (сек.)</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QSlider" name="horizontalSlider_timeaut">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Таймаут между сообщениями&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Устанавливает интервал в секундах между отправкой каждого сообщения / письма.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Не рекомендуется ставить маленький таймаут! &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Сервер может посчитать что вы бот и отбрасывать ваши сообщения.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="whatsThis">
+                 <string>Таймаут между сообщениями (сек.)</string>
+                </property>
+                <property name="minimum">
+                 <number>5</number>
+                </property>
+                <property name="maximum">
+                 <number>100</number>
+                </property>
+                <property name="singleStep">
+                 <number>5</number>
+                </property>
+                <property name="pageStep">
+                 <number>5</number>
+                </property>
+                <property name="value">
+                 <number>5</number>
+                </property>
+                <property name="sliderPosition">
+                 <number>5</number>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="tickPosition">
+                 <enum>QSlider::TicksBelow</enum>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="Line" name="line">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBox_Blacklist">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Включает черный список. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Изменения применяются сразу после закрытия окна настроек. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Если рассылка уже работает, изменения вступят в силу только после перезапуска расылки.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="whatsThis">
+               <string>Включить черный список</string>
+              </property>
+              <property name="text">
+               <string>&amp;Черный список</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBox_repeat">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Активирует режим повтора рассылки. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Если режим активен, после нажатия кнопки &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;&amp;quot;ПУСК&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;, расылка будет повторяться бесконечно.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="whatsThis">
+               <string>Включить повтор рассылки</string>
+              </property>
+              <property name="text">
+               <string>&amp;Повторять рассылку</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox_9">
+           <property name="whatsThis">
+            <string>Выбор режима работы</string>
+           </property>
+           <property name="title">
+            <string>Выбор режима работы</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QRadioButton" name="radioButton_ramdom">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Отправлять случайно выбранное из шаблонов письмо (сообщение).&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="whatsThis">
+                 <string>Всем отправляется случайно выбранное из шаблонов письмо</string>
+                </property>
+                <property name="text">
+                 <string>&amp;СЛУЧАЙНО</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioButton_order">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Все письма отправляются по порядку, начиная с первого.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Если выбрано письмо в разделе &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;&amp;quot;Отправлять это письмо (начать с этого письма)&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;, то отправка начнется с этого письма!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="whatsThis">
+                 <string>Все письма отправляются по порядку, начиная с первого.
+Если выбрано письмо в разделе &quot;Отправлять это письмо / Начать с этого письма&quot;, то отправка начнется с этого письма.</string>
+                </property>
+                <property name="text">
+                 <string>ПО &amp;ПОРЯДКУ</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioButton_one">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Отправлять только одно письмо&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Будет отправляться письмо, выбранное в разделе  &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;&amp;quot;Отправлять это письмо (начать с этого письма)&amp;quot;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="text">
+                 <string>&amp;ОДНО ПИСЬМО (СООБЩ.)</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox_4">
+           <property name="title">
+            <string>Отправлять это письмо ( начать с этого письма)</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <item>
+             <widget class="QComboBox" name="comboBox_one_letter">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Отправлять это письмо (начать с этого письма)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Если активен режим &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;&amp;quot;ПО ПОРЯДКУ&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;, отправка начинается с текущего письма. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;При активном режиме &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;&amp;quot;ОДНО ПИСЬМО (СООБЩ.)&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; всем отправляется это письмо. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="whatsThis">
+               <string>Отправка начинается с текущего сообщения, если активен режим &quot;По порядку&quot;. Или всем отправляется только выбранное письмо при активном режиме &quot;Одно письмо&quot;.</string>
+              </property>
+              <property name="sizeAdjustPolicy">
+               <enum>QComboBox::AdjustToMinimumContentsLength</enum>
+              </property>
+              <item>
+               <property name="text">
+                <string>Пример письма №1. Письмо должно содержать не менее 200 символов.</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox">
+           <property name="title">
+            <string>Отправлять это сообщения (начать с этого сообщения)</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <item>
+             <widget class="QComboBox" name="comboBox_one_msg">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Отправлять это сообщения (начать с этого сообщения)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Если активен режим &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;&amp;quot;ПО ПОРЯДКУ&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;, отправка начинается с текущего сообщения. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;При активном режиме &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;&amp;quot;ОДНО ПИСЬМО (СООБЩ.)&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; всем отправляется это сообщение. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="whatsThis">
+               <string>Отправка начинается с текущего сообщения, если активен режим &quot;По порядку&quot;. Или всем отправляется только выбранное письмо при активном режиме &quot;Одно письмо&quot;.</string>
+              </property>
+              <property name="sizeAdjustPolicy">
+               <enum>QComboBox::AdjustToMinimumContentsLength</enum>
+              </property>
+              <item>
+               <property name="text">
+                <string>Пример сообщения в чат №1. Обратите внимание на точку с запятой в конце письма. Так мы разделяем одно сообщение от другого;</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox_7">
+           <property name="title">
+            <string>Стиль приложения</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_14">
+            <item>
+             <widget class="QComboBox" name="comboBox_style">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Изменить стиль приложения&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Изменения вступят в силу после перезапуска программы.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="whatsThis">
+               <string>Стиль приложения. Для применения изменений требуется перезапуск приложения.</string>
+              </property>
+              <property name="sizeAdjustPolicy">
+               <enum>QComboBox::AdjustToMinimumContentsLength</enum>
+              </property>
+              <item>
+               <property name="text">
+                <string>Plastique (по умолчанию)</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Системная (без темы)</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Cleanlooks</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Windows</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Mac</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Sgi</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Cde</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Motif</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>42</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="page_1">
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QGroupBox" name="groupBox_5">
+           <property name="title">
+            <string>Выбрать фото</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1">
+            <property name="spacing">
+             <number>12</number>
+            </property>
+            <item>
+             <widget class="QListWidget" name="listWidgetPic">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Снять выделение фото&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="whatsThis">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Отменить выделение&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>96</width>
+                <height>84</height>
+               </size>
+              </property>
+              <property name="movement">
+               <enum>QListView::Static</enum>
+              </property>
+              <property name="flow">
+               <enum>QListView::LeftToRight</enum>
+              </property>
+              <property name="isWrapping" stdset="0">
+               <bool>true</bool>
+              </property>
+              <property name="resizeMode">
+               <enum>QListView::Adjust</enum>
+              </property>
+              <property name="spacing">
+               <number>5</number>
+              </property>
+              <property name="viewMode">
+               <enum>QListView::IconMode</enum>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+              <item>
+               <property name="text">
+                <string>no photo</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/res/no_photo.png</normaloff>:/res/no_photo.png</iconset>
+               </property>
+               <property name="flags">
+                <set>ItemIsSelectable|ItemIsUserCheckable</set>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="page_2">
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QGroupBox" name="groupBox_2">
+           <property name="title">
+            <string>Отправки письма</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_letter_subject">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>120</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Заголовок отправляемого письма&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Если число заголовков равно числу писем, то первый заголовок будет отправлен с первым письмом. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Если заголовков больше или меньше, заголовок к письму будет выбран случайно.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="whatsThis">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Заголовки писем&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="plainText">
+               <string>Пример заголовка 1
+======
+Пример заголовка 2
+======
+Пример заголовка 3</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_letter_body">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>1</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Шаблоны писем&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Сюда вставляем шаблоны писем для отправки поклонникам. Обратите внимание на знаки рано &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;&amp;quot;=&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; в конце письма. Так мы разделяем одно письмо от другого. Знаков разделения может быть любое количество.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Если вставить в письмо переменную &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;%name%&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;, она будет автоматически заменена на имя мужчины. Каждое письмо должно содержать&lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt; не менее 200 символов!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Если вы хотите отправить фото вместе с письмом, перейдите на вкладку &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;&amp;quot;Фото&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; и выберите нужные. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;В письме можно использовать HTML разметку, например &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;&amp;lt;b&amp;gt;&lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;этот текст&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;&amp;lt;/b&amp;gt; будет виден в сообщении жирным шрифтом.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="whatsThis">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Шаблоны писем&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="plainText">
+               <string>Пример письма №1. 
+
+Если вставить в письмо переменную %name%, она будет автоматически заменена на имя мужчины. Письмо должно содержать не менее 200 символов
+======
+Пример письма №2. 
+
+Обратите внимание на знаки рано (=) в конце письма. Так мы разделяем одно письмо от другого. Знаков разделения может быть любое количество.
+======
+Пример письма №3. 
+
+Если вы хотите отправить фото вместе с письмом, перейдите на вкладку &quot;Фото&quot; и выберите нужные. 
+В письме можно использовать HTML разметку, например &lt;b&gt;этот текст&lt;/b&gt; будет виден в сообщении жирным шрифтом.</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="page_3">
+        <layout class="QVBoxLayout" name="verticalLayout_10">
+         <item>
+          <widget class="QGroupBox" name="groupBox_3">
+           <property name="title">
+            <string>Отправка сообщения в чат </string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_9">
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_msg">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Шаблоны сообщений&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Сюда вставляем шаблоны сообщений для отправки в чат. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Обратите внимание на знаки равно&lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt; &amp;quot;=&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;/&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;в конце письма. Так мы разделяем одно письмо от другого. Знаков разделения может быть любое количество.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Если вставить в письмо переменную &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;%name%&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;, она будет автоматически заменена на имя мужчины.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="whatsThis">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Шаблон сообщения в чат&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="plainText">
+               <string>Пример сообщения в чат №1. 
+
+Обратите внимание на знаки равно (=) в конце письма. Так мы разделяем одно письмо от другого. Знаков разделения может быть любое количество. 
+========
+Пример сообщения в чат №2. 
+
+Если вставить в письмо переменную %name%, она будет автоматически заменена на имя мужчины.
+========
+Пример сообщения в чат №3. 
+
+Обратите внимание на знаки равно (=) в конце письма. Так мы разделяем одно письмо от другого. Знаков разделения может быть любое количество. </string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="page_4">
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QGroupBox" name="groupBox_6">
+           <property name="title">
+            <string>ЧАТ</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_12">
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_chat_blacklist">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Черный список чата&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;&lt;br/&gt;Сюда вставляем &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;id&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; мужчин, которым мы не желаем отправлять сообщения.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Обратите внимание на запятые &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;&amp;quot;,&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; после каждого id. Так мы разделяем один id от другого.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Послк рассылки сыда автоматически заносятся id отправка для которых завершилась с ошибкой.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="whatsThis">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Черный список чата&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="plainText">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox_8">
+           <property name="title">
+            <string>ПОКЛОННИКИ</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_15">
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit_admirer_blacklist">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Черный список поклонников&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;&lt;br/&gt;Сюда вставляем &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;id&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; мужчин, которым мы не желаем отправлять сообщения.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Обратите внимание на запятые &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;&amp;quot;,&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; после каждого id. Так мы разделяем один id от другого.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Послк рассылки сыда автоматически заносятся id отправка для которых завершилась с ошибкой.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="whatsThis">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Черный список поклонников&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="plainText">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Close|QDialogButtonBox::Ok</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>listWidget</sender>
+   <signal>currentItemChanged(QListWidgetItem*,QListWidgetItem*)</signal>
+   <receiver>Dialog</receiver>
+   <slot>changePage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>94</x>
+     <y>353</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>143</x>
+     <y>390</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_timeaut</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>lcdNumber_2</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>158</x>
+     <y>52</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>178</x>
+     <y>52</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_interval</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>lcdNumber</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>158</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>178</x>
+     <y>48</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>Dialog</receiver>
+   <slot>applySettings()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>629</x>
+     <y>519</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>471</x>
+     <y>441</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>Dialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>629</x>
+     <y>519</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>591</x>
+     <y>435</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_interval</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_interval_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>158</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>484</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_timeaut</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_timeaut_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>158</x>
+     <y>52</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>326</x>
+     <y>-2</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_Blacklist</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_blacklist_state_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>36</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>142</x>
+     <y>97</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_repeat</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_repeat_state_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>30</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>143</x>
+     <y>150</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_ramdom</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_mode1_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>137</x>
+     <y>52</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>141</x>
+     <y>212</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_order</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_mode2_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>158</x>
+     <y>52</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>143</x>
+     <y>243</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_one</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_mode3_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>178</x>
+     <y>52</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>709</x>
+     <y>201</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_one_msg</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_one_msg_index_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>58</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>142</x>
+     <y>287</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_one_letter</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_one_letter_index_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>54</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>143</x>
+     <y>341</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidgetPic</sender>
+   <signal>itemClicked(QListWidgetItem*)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_photo_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>47</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>274</x>
+     <y>8</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>plainTextEdit_letter_subject</sender>
+   <signal>textChanged()</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_letter_subject_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>47</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>153</x>
+     <y>7</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>plainTextEdit_letter_body</sender>
+   <signal>textChanged()</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_letter_body_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>42</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>139</x>
+     <y>191</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>plainTextEdit_msg</sender>
+   <signal>textChanged()</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_msg_body_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>47</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>167</x>
+     <y>1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_one_msg</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_one_msg_index_changed_int()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>58</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>142</x>
+     <y>330</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_one_letter</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_one_letter_index_changed_int()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>54</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>141</x>
+     <y>439</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_style</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_style_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>61</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>141</x>
+     <y>369</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>plainTextEdit_chat_blacklist</sender>
+   <signal>textChanged()</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_chat_blacklist_body_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>210</x>
+     <y>58</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>115</x>
+     <y>32</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>plainTextEdit_admirer_blacklist</sender>
+   <signal>textChanged()</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_admirer_blacklist_body_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>430</x>
+     <y>96</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>632</x>
+     <y>61</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>10</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>10</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
+ <slots>
+  <slot>changePage()</slot>
+  <slot>applySettings()</slot>
+  <slot>itemClick()</slot>
+  <slot>on_interval_changed()</slot>
+  <slot>on_timeaut_changed()</slot>
+  <slot>on_blacklist_state_changed()</slot>
+  <slot>on_repeat_state_changed()</slot>
+  <slot>on_mode1_changed()</slot>
+  <slot>on_mode2_changed()</slot>
+  <slot>on_mode3_changed()</slot>
+  <slot>on_one_msg_index_changed()</slot>
+  <slot>on_one_letter_index_changed()</slot>
+  <slot>on_photo_changed()</slot>
+  <slot>on_letter_subject_changed()</slot>
+  <slot>on_letter_body_changed()</slot>
+  <slot>on_msg_body_changed()</slot>
+  <slot>on_one_letter_index_changed_int()</slot>
+  <slot>on_one_msg_index_changed_int()</slot>
+  <slot>on_blacklist_body_changed()</slot>
+  <slot>on_style_changed()</slot>
+  <slot>on_chat_blacklist_body_changed()</slot>
+  <slot>on_admirer_blacklist_body_changed()</slot>
+  <slot>on_bot_state_changed()</slot>
+  <slot>on_sleep_interval_changed()</slot>
+ </slots>
+</ui>

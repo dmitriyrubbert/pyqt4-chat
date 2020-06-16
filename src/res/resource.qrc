@@ -1,0 +1,17 @@
+<RCC>
+  <qresource>
+    <file>../res/blacklist.png</file>
+    <file>../res/chat.png</file>
+    <file>../res/config.png</file>
+    <file>../res/Craig.gif</file>
+    <file>../res/Kartman.gif</file>
+    <file>../res/appicon.png</file>
+    <file>../res/Kenny.gif</file>
+    <file>../res/Kyle.gif</file>
+    <file>../res/mail.png</file>
+    <file>../res/no_photo.png</file>
+    <file>../res/photo.png</file>
+    <file>../res/Tweek.gif</file>
+    <file>../res/no_picture.png</file>
+  </qresource>
+</RCC>

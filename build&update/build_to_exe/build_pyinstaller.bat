@@ -1,0 +1,1 @@
+pyinstaller --log-level=DEBUG  --noconfirm --noconsole  Alisa-Sender.spec

@@ -1,0 +1,14 @@
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+*.exe
+*Thumbs*
+*.zip
+*sublime*
+
+/log
+/build
+/data
